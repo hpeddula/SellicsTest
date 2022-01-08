@@ -52,7 +52,7 @@ function ImageGallery() {
             <SliderButton data-testid="leftButton" justifycontent="flex-start" color='primary' disabled={leftButtonDisabled} onClick={() => onButtonClick('left')}>
                 <ChevronLeftRounded fontSize='large' />
             </SliderButton>
-            <Grid ref={gridRef} container spacing={2} padding={0} wrap={'nowrap'} overflow={'hidden'}>
+            <Grid ref={gridRef} container spacing={2} padding={0} wrap={'nowrap'} overflow={'hidden'} onScroll={setDisableStatusForLeftRightButtons}>
                 {approvedImages?.map((src: string, index: number) => (
                     <Grid item key={index}>
                         <StyledDone />
