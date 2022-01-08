@@ -44,6 +44,9 @@ export const appImageSlice = createSlice({
       state.approvedImages = [];
       state.id = '';
       state.urls = {};
+      state.loading = false;
+      state.rejectedImages = [];
+      state.error = '';
     },
     toggleLoading: (state) => {
       state.loading = !state.loading;
